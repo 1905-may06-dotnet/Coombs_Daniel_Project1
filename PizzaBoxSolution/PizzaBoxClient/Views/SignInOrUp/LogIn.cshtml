@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Daniel Coombs, this website allows users to order pizzas or view data related to ordering">
+    <meta name="keyword" content="LogIn">
+    <meta name="description" content="This platform allows users to log in or redirect to create an account">
+    <title>Log In</title>
+
+</head>
+<body>
+    <h1>Log In Page</h1>
+    <form action="~/Views/SignInOrUp/LogIn.cshtml">
+        <legend>
+            <fieldset>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="username" class="login">Username</label>
+
+                        </td>
+                        <td>
+                            <input type="text" id="username" name="username" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password" class="login">Password</label>
+                        </td>
+                        <td>
+                            <input type="password" id="password" name="password" required>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </legend>
+        <a href="~/Views/Home/Index">
+            <input type="button" value="Log In">
+        </a>
+        <p1>
+            <a href="~/SignInOrUp/CreateAccount">Create an Account</a>
+        </p1>
+        <div class="h4" style="padding: 50px 0px 0px 0px">
+            Please Log In or Create an Account to
+            <ul>
+                <li><i>Place an Order</i></li>
+                <li><i>View Your Orders</i></li>
+                <li><i>Liew Locations</i></li>
+            </ul>
+        </div>
+
+    </form>
+</body>
+</html>
