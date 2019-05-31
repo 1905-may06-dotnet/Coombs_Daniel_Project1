@@ -76,8 +76,10 @@ namespace PizzaBoxClient.Controllers
 
             pizza.Subtotal = pizza.CalculateSubtotal();
 
-            try
+            try 
             {
+                pizza.Date = DateTime.UtcNow.ToLocalTime().Date;
+                pizza.Time = DateTime.UtcNow.ToLocalTime().TimeOfDay;
                 db.AddOrder(pizza);
                 db.Save();
 
@@ -85,6 +87,9 @@ namespace PizzaBoxClient.Controllers
             }
             catch
             {
+                //error to fix
+                //SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Order_Customer_ID". 
+                //The conflict occurred in database "PizzaBoxDB", table "dbo.CustomerAccountInfo", column 'CustomerID'.
                 ViewData["Text"] = "Could not submit order.";
                 return View();
             }
