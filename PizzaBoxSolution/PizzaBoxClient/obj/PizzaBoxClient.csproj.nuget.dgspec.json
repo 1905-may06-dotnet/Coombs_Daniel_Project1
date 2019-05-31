@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxClient\\PizzaBoxClient.csproj": {}
+    "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxClient\\PizzaBoxClient.csproj": {}
   },
   "projects": {
-    "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxClient\\PizzaBoxClient.csproj": {
+    "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxClient\\PizzaBoxClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxClient\\PizzaBoxClient.csproj",
+        "projectUniqueName": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxClient\\PizzaBoxClient.csproj",
         "projectName": "PizzaBoxClient",
-        "projectPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxClient\\PizzaBoxClient.csproj",
+        "projectPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxClient\\PizzaBoxClient.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxClient\\obj\\",
+        "outputPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -32,11 +32,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj": {
-                "projectPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj"
+              "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj": {
+                "projectPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj"
               },
-              "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj": {
-                "projectPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj"
+              "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj": {
+                "projectPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj": {
+    "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj",
+        "projectUniqueName": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj",
         "projectName": "PizzaBoxData",
-        "projectPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj",
+        "projectPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxData\\PizzaBoxData.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxData\\obj\\",
+        "outputPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",
@@ -108,8 +108,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj": {
-                "projectPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj"
+              "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj": {
+                "projectPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj"
               }
             }
           }
@@ -152,14 +152,14 @@
         }
       }
     },
-    "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj": {
+    "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj",
+        "projectUniqueName": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj",
         "projectName": "PizzaBoxDomain",
-        "projectPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj",
+        "projectPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\obj\\",
+        "outputPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",

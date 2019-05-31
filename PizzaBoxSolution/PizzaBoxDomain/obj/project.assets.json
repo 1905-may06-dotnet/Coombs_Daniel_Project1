@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj",
+      "projectUniqueName": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj",
       "projectName": "PizzaBoxDomain",
-      "projectPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj",
+      "projectPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\PizzaBoxDomain.csproj",
       "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Revature\\Project1\\PizzaBoxSolution\\PizzaBoxDomain\\obj\\",
+      "outputPath": "C:\\Revature\\Project1\\Coombs_Daniel_Project1\\PizzaBoxSolution\\PizzaBoxDomain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\ProgramData\\Xamarin\\NuGet\\",

@@ -16,7 +16,7 @@ namespace PizzaBoxDomain
 
         IEnumerable<Pizza> GetOrders();
 
-        Pizza GetPizzaByID(int ID);
+        Pizza GetPizzaByID(string ID);
         void AddOrder(Pizza pizza);
 
         IEnumerable<StoreInformation> GetStores();

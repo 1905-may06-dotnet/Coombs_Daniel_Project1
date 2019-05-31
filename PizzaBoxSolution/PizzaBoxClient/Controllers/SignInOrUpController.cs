@@ -31,8 +31,38 @@ namespace PizzaBoxClient.Controllers
         public ActionResult LogIn(IFormCollection collection, Models.CustomerModel cust)
         {
             Customer c = new Customer();
-            var customer = db.GetCustomerByUser(cust.Username);
+            var customer = db.GetCustomers();
+            foreach (var i in customer)
+            {
+                if (i.Username == cust.Username)
+                {
+                    if (i.Password == cust.Password)
+                    {
+                        var user = db.GetCustomerByUser(i.Username);
+                        c.Username = i.Username;
+                        c.Password = i.Password;
 
+                        c.FirstName = i.FirstName;
+                        c.LastName = i.LastName;
+                        c.Add1 = i.Add1;
+                        c.Add2 = i.Add2;
+                        c.City = i.City;
+                        c.State = i.State;
+                        c.Country = i.Country;
+                        c.ZipCode = i.ZipCode;
+
+                        c.CustID = i.CustID;
+
+                        TempData["custid"] = c.CustID;
+
+                        return RedirectToAction("Locations", "Home");
+                    }
+                    ViewData["Text"] = "Incorrect Password.";
+                    return View();
+                }
+            }
+
+            ViewData["Text"] = "Username does not exist.";
             return View();
         }
 
@@ -61,7 +91,7 @@ namespace PizzaBoxClient.Controllers
             }
             if (usernametaken == true)
             {
-                ViewBag.Message = "Username is taken. Please choose a different username.";
+                ViewData["Text"] = "Username is taken.";
                 return View(); //include error catcher
             }
             else
@@ -74,7 +104,7 @@ namespace PizzaBoxClient.Controllers
             }
             else
             {
-                ViewBag.Message = "Passwords do not match. Please make sure your passwords match.";
+                ViewData["Text"] = "Passwords do not match.";
                 return View(); //include error catcher
             }
 
@@ -92,8 +122,8 @@ namespace PizzaBoxClient.Controllers
                 db.AddCustomer(c);
                 db.Save();
                 c.CustID = db.GetCustomerByUser(cust.Username).CustID;
-                return RedirectToAction(nameof(LogIn));
-                //return RedirectToAction(nameof(Index));
+                TempData["custid"] = c.CustID;
+                return RedirectToAction("Locations", "Home");
             }
             catch
             {

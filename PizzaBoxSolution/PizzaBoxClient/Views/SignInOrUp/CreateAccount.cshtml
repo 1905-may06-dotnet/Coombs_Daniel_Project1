@@ -2,14 +2,14 @@
 
 @{
     Layout = "_Layout";
-    ViewData["Title"] = "CreateAccount";
-}
 
-@ViewBag.Title = "CreateAccount";
+}
 
 <h1>CreateAccount</h1>
 <hr />
-<p>@ViewBag.Message</p>
+@ViewData["Text"]
+<br>
+<br>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="CreateAccount">

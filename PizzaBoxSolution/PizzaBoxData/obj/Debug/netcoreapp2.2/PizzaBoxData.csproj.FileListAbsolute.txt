@@ -12,3 +12,17 @@ C:\Revature\Project1\PizzaBoxSolution\PizzaBoxData\obj\Debug\netcoreapp2.2\Pizza
 C:\Revature\Project1\PizzaBoxSolution\PizzaBoxData\bin\Debug\netcoreapp2.2\PizzaBoxDomain.dll
 C:\Revature\Project1\PizzaBoxSolution\PizzaBoxData\bin\Debug\netcoreapp2.2\PizzaBoxDomain.pdb
 C:\Revature\Project1\PizzaBoxSolution\PizzaBoxData\obj\Debug\netcoreapp2.2\PizzaBoxData.csproj.CopyComplete
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\bin\Debug\netcoreapp2.2\PizzaBoxData.deps.json
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\bin\Debug\netcoreapp2.2\PizzaBoxData.runtimeconfig.json
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\bin\Debug\netcoreapp2.2\PizzaBoxData.runtimeconfig.dev.json
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\bin\Debug\netcoreapp2.2\PizzaBoxData.dll
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\bin\Debug\netcoreapp2.2\PizzaBoxData.pdb
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\bin\Debug\netcoreapp2.2\PizzaBoxDomain.dll
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\bin\Debug\netcoreapp2.2\PizzaBoxDomain.pdb
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\obj\Debug\netcoreapp2.2\PizzaBoxData.csprojAssemblyReference.cache
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\obj\Debug\netcoreapp2.2\PizzaBoxData.csproj.CoreCompileInputs.cache
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\obj\Debug\netcoreapp2.2\PizzaBoxData.AssemblyInfoInputs.cache
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\obj\Debug\netcoreapp2.2\PizzaBoxData.AssemblyInfo.cs
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\obj\Debug\netcoreapp2.2\PizzaBoxData.csproj.CopyComplete
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\obj\Debug\netcoreapp2.2\PizzaBoxData.dll
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxData\obj\Debug\netcoreapp2.2\PizzaBoxData.pdb
