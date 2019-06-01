@@ -36,7 +36,7 @@ namespace PizzaBoxData.Data
             modelBuilder.Entity<CustomerAccountInfo>(entity =>
             {
                 entity.HasKey(e => e.CustomerId)
-                    .HasName("PK_Customer_ID");
+                    .HasName("PK__Customer__A4AE64B8B44E83A3");
 
                 entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
 
@@ -94,7 +94,7 @@ namespace PizzaBoxData.Data
             modelBuilder.Entity<OrdersPlaced>(entity =>
             {
                 entity.HasKey(e => e.OrderId)
-                    .HasName("PK_Order_ID");
+                    .HasName("PK__OrdersPl__C3905BAFC5407124");
 
                 entity.Property(e => e.OrderId).HasColumnName("OrderID");
 
@@ -152,18 +152,18 @@ namespace PizzaBoxData.Data
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.OrdersPlaced)
                     .HasForeignKey(d => d.CustomerId)
-                    .HasConstraintName("FK_Order_Customer_ID");
+                    .HasConstraintName("FK__OrdersPla__Custo__7C4F7684");
 
                 entity.HasOne(d => d.Store)
                     .WithMany(p => p.OrdersPlaced)
                     .HasForeignKey(d => d.StoreId)
-                    .HasConstraintName("FK_Order_Store_ID");
+                    .HasConstraintName("FK__OrdersPla__Store__7D439ABD");
             });
 
             modelBuilder.Entity<StoreInfo>(entity =>
             {
                 entity.HasKey(e => e.StoreId)
-                    .HasName("PK_Store_ID");
+                    .HasName("PK__StoreInf__3B82F0E15A6D54C9");
 
                 entity.Property(e => e.StoreId).HasColumnName("StoreID");
 
@@ -201,7 +201,7 @@ namespace PizzaBoxData.Data
             modelBuilder.Entity<StoreInventory>(entity =>
             {
                 entity.HasKey(e => e.InventoryId)
-                    .HasName("PK_Inventory_ID");
+                    .HasName("PK__StoreInv__F5FDE6D32BBD8A0A");
 
                 entity.Property(e => e.InventoryId).HasColumnName("InventoryID");
 
@@ -230,7 +230,7 @@ namespace PizzaBoxData.Data
                 entity.HasOne(d => d.Store)
                     .WithMany(p => p.StoreInventory)
                     .HasForeignKey(d => d.StoreId)
-                    .HasConstraintName("FK_Inventory_Store_ID");
+                    .HasConstraintName("FK__StoreInve__Store__75A278F5");
             });
         }
     }

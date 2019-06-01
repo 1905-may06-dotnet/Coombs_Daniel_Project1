@@ -62,7 +62,50 @@ namespace PizzaBoxDomain
             if (Topping4 != null && Topping4 != "" && Topping4 != "None") subtotal += 0.75M;
             if (Topping5 != null && Topping5 != "" && Topping5 != "None") subtotal += 0.75M;
 
-            return subtotal;
+            return subtotal*Qty;
+        }
+
+        public bool CheckIfEligible2Hours(TimeSpan time, DateTime date)
+        {
+            if (date == DateTime.UtcNow.ToLocalTime().Date) //ordering on same day
+            {
+                if (time + TimeSpan.FromHours(2) > DateTime.UtcNow.ToLocalTime().TimeOfDay) //not yet 2 hours from last order
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public bool CheckIfEligibleSameDay(DateTime date, int loc)
+        {
+            if (date == DateTime.UtcNow.ToLocalTime().Date) //ordering on same day
+            {
+                if (Location != loc) //not ordering from same location
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public bool CheckIfOverAmount()
+        {
+            if (Subtotal > 1000.00M) return false; //orders over $1000
+            return true;
+        }
+
+        public string ConfirmOrderString()
+        {
+            string script = "";
+            script = $"{Qty} {Size} {Crust} Crust Pizza";
+            if (Qty > 1) script += "s";
+            script += $"with the Following Topping(s):\n{Topping1}, {Topping2}";
+            if (Topping3 != null && Topping3 != "") script += $", {Topping3}";
+            if (Topping4 != null && Topping4 != "") script += $", {Topping4}";
+            if (Topping5 != null && Topping5 != "") script += $", {Topping5}";
+            script += $"\nQty: {Qty} Subtotal: ${Subtotal}";
+            return script;
         }
     }
 }

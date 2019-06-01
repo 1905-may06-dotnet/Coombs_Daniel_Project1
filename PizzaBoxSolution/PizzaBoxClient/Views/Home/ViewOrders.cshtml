@@ -44,7 +44,7 @@
                 @Html.DisplayNameFor(model => model.TimePlaced)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DatePlaced)
+                @Html.DisplayNameFor(model => model.DatePlaced.Date)
             </th>
             <th></th>
         </tr>
@@ -80,7 +80,7 @@
                 @Html.DisplayFor(modelItem => item.Qty)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Subtotal)
+                $@Html.DisplayFor(modelItem => item.Subtotal)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TimePlaced)

@@ -53,18 +53,26 @@ namespace PizzaBoxClient.Controllers
 
         public ActionResult PlaceOrder()
         {
-            om = new OrderModel();
+            om = new OrderModel(); //test to see if necessary
             return View();
         }
 
         [HttpPost]
-        public ActionResult PlaceOrder(Models.OrderModel ordermodel)
+        public ActionResult PlaceOrder(IFormCollection collection, Models.OrderModel ordermodel)
         {
+            var or = db.GetOrders();
+
             pizza = new Pizza();
 
             pizza.CustID = TempData["custID"] as string;
             TempData.Keep();
 
+            ordermodel.CustID = TempData["custID"] as string;
+            TempData.Keep();
+
+
+
+            pizza.Location = ordermodel.Location;
             pizza.Size = ordermodel.Size;
             pizza.Crust = ordermodel.Crust;
             pizza.Topping1 = ordermodel.Topping1;
@@ -76,31 +84,57 @@ namespace PizzaBoxClient.Controllers
 
             pizza.Subtotal = pizza.CalculateSubtotal();
 
+            foreach (var i in or)
+            {
+                if (pizza.CustID == i.CustID)
+                {
+                    if (pizza.CheckIfEligible2Hours(i.Time, i.Date) == false)
+                    {
+                        ViewData["Text"] = "Please wait 2 hours after ordering to place another order.";
+                        return View();
+                    }
+                    if (pizza.CheckIfEligibleSameDay(i.Date, i.Location) == false)
+                    {
+                        ViewData["Text"] = "You can only order at one location per day.";
+                        return View();
+                    }
+                }
+            }
+
+            if (pizza.CheckIfOverAmount() == false)
+            {
+                ViewData["Text"] = "Your order cannot exceed over $1000.";
+                return View();
+            }
+
             try 
             {
-                pizza.Date = DateTime.UtcNow.ToLocalTime().Date;
-                pizza.Time = DateTime.UtcNow.ToLocalTime().TimeOfDay;
-                db.AddOrder(pizza);
-                db.Save();
+                
 
-                return RedirectToAction("Locations");
+                return RedirectToAction("ConfirmOrder");
             }
             catch
             {
-                //error to fix
-                //SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Order_Customer_ID". 
-                //The conflict occurred in database "PizzaBoxDB", table "dbo.CustomerAccountInfo", column 'CustomerID'.
                 ViewData["Text"] = "Could not submit order.";
                 return View();
             }
 
         }
 
-        /*public IActionResult ConfirmOrder()
+        public IActionResult ConfirmOrder()
         {
-            
-            return View(pizza);
-        }*/
+            return View(om); //start here
+        }
+
+        [HttpPost]
+        public ActionResult ConfirmOrder(IFormCollection collection, Models.OrderModel ordermodel)
+        {
+            pizza.Date = DateTime.UtcNow.ToLocalTime().Date;
+            pizza.Time = DateTime.UtcNow.ToLocalTime().TimeOfDay;
+            db.AddOrder(pizza);
+            db.Save();
+            return View();
+        }
 
         public ActionResult RedirectToViewOrders()
         {

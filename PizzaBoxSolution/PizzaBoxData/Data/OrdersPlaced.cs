@@ -15,10 +15,10 @@ namespace PizzaBoxData.Data
         public string Topping3 { get; set; }
         public string Topping4 { get; set; }
         public string Topping5 { get; set; }
-        public decimal? Subtotal { get; set; }
-        public TimeSpan Timeplaced { get; set; }
-        public DateTime Dateplaced { get; set; }
         public int? Qty { get; set; }
+        public decimal? Subtotal { get; set; }
+        public TimeSpan? Timeplaced { get; set; }
+        public DateTime? Dateplaced { get; set; }
 
         public virtual CustomerAccountInfo Customer { get; set; }
         public virtual StoreInfo Store { get; set; }

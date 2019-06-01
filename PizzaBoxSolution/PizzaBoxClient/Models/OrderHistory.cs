@@ -7,8 +7,6 @@ namespace PizzaBoxClient.Models
 {
     public class OrderHistory
     {
-        public List<string> Locations = new List<string>() { "Arlington", "Dallas", "Fort Worth", "Houston", "Austin" };
-
         public string OrderID { get; set; }
         
         public string Size { get; set; }
@@ -20,9 +18,25 @@ namespace PizzaBoxClient.Models
         public string Topping5 { get; set; }
         public int Qty { get; set; }
         public decimal Subtotal { get; set; }
+
         public TimeSpan TimePlaced { get; set; }
+
         public DateTime DatePlaced { get; set; }
 
+        public int Location { get; set; }
 
+        public string LocString { get { return LocationToString(Location); } }
+
+        public string LocationToString(int loc)
+        {
+            switch (loc)
+            {
+                case 1: return "Arlington";
+                case 2: return "Dallas";
+                case 3: return "Fort Worth";
+                case 4: return "Houston";
+                default: return "Austin";
+            }
+        }
     }
 }

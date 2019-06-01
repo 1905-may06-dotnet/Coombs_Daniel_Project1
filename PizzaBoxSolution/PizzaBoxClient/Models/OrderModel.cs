@@ -8,6 +8,8 @@ namespace PizzaBoxClient.Models
 {
     public class OrderModel
     {
+
+        public string CustID { get; set; }
         public int Location { get; set; }
         public string Size { get; set; }
         public string Crust { get; set; }
@@ -20,9 +22,8 @@ namespace PizzaBoxClient.Models
         [Required(ErrorMessage="Please select a quantity.")]
         public int Qty { get; set; }
 
-        public List<string> SizeList = new List<string>() { "Small", "Medium", "Large", "Extra Large"};
-        public List<string> CrustList = new List<string>() { "Hand Tossed", "Thin", "Pan", "Thick", "Stuffed" };
-        public List<string> ToppingsList = new List<string>() { "Pepperoni", "Sausage", "Bacon", "Pineapple", "Mushrooms", "Onions", "Extra Cheese", "Olives" };
+
+        public string ConfirmOrderScript { get; set; } //returns script for confirm order
 
     }
 }

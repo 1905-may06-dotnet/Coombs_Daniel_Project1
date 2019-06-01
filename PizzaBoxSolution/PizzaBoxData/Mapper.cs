@@ -34,7 +34,8 @@ namespace PizzaBoxData
             Country = cust.Country,
             Zipcode = cust.ZipCode,
             Username = cust.Username,
-            Password = cust.Password
+            Password = cust.Password,
+            CustomerId = Convert.ToInt32(cust.CustID)
         };
 
         public static Pizza Map(OrdersPlaced order) => new Pizza
@@ -50,14 +51,14 @@ namespace PizzaBoxData
             Topping4 = order.Topping4,
             Topping5 = order.Topping5,
             Subtotal = Convert.ToDecimal(order.Subtotal),
-            Time = order.Timeplaced,
-            Date = order.Dateplaced,
+            Time = (TimeSpan)order.Timeplaced,
+            Date = (DateTime)order.Dateplaced,
             Qty = Convert.ToInt32(order.Qty)
         };
 
         public static OrdersPlaced Map(Pizza order) => new OrdersPlaced
         {
-            CustomerId = Convert.ToInt32(order.OrderID),
+            CustomerId = Convert.ToInt32(order.CustID),
             StoreId = order.Location,
             Size = order.Size,
             Crust = order.Crust,
