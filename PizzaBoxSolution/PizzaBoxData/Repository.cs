@@ -48,6 +48,12 @@ namespace PizzaBoxData
             return _db.OrdersPlaced.Select(o => Mapper.Map(o));
         }
 
+        public Pizza GetOrdersByRestaurant(int ID)
+        {
+            var orders = _db.OrdersPlaced.Where(o => o.StoreId == ID).FirstOrDefault();
+            return Mapper.Map(orders);
+        }
+
         public Pizza GetPizzaByID(string ID)
         {
             var pizza = _db.OrdersPlaced.Where(o => o.OrderId == Convert.ToInt32(ID)).FirstOrDefault();

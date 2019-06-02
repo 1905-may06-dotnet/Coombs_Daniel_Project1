@@ -8,7 +8,7 @@ namespace PizzaBoxClient.Models
 {
     public class OrderModel
     {
-
+        public decimal Subtotal { get; set; }
         public string CustID { get; set; }
         public int Location { get; set; }
         public string Size { get; set; }

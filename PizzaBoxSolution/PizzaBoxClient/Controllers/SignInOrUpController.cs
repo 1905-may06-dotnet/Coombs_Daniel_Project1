@@ -16,6 +16,9 @@ namespace PizzaBoxClient.Controllers
         Models.CustomerModel cust = new Models.CustomerModel();
         List<Models.CustomerModel> custlist = new List<Models.CustomerModel>();
 
+        Pizza p = new Pizza();
+        Customer c = new Customer();
+
         public SignInOrUpController(IRepository db)
         {
             this.db = db;
@@ -23,6 +26,7 @@ namespace PizzaBoxClient.Controllers
         // GET: SignInOrUp
         public ActionResult LogIn()
         {
+            TempData["custid"] = "-1";
             return View();
         }
 
@@ -30,7 +34,7 @@ namespace PizzaBoxClient.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogIn(IFormCollection collection, Models.CustomerModel cust)
         {
-            Customer c = new Customer();
+            
             var customer = db.GetCustomers();
             foreach (var i in customer)
             {

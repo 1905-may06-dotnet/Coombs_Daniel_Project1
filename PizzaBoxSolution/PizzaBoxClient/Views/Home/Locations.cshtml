@@ -6,7 +6,8 @@
 }
 
 <h1>Locations</h1>
-
+<br />
+<p>@ViewBag.OrderSubmitted</p>
 <table class="table">
     <thead>
         <tr>
@@ -52,9 +53,6 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.ZipCode)
-                </td>
-                <td>
-                    @Html.ActionLink("View Data", "Details", new { /* id=item.PrimaryKey */ })
                 </td>
             </tr>
         }

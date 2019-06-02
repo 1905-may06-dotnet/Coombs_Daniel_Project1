@@ -25,6 +25,8 @@ namespace PizzaBoxClient.Models
 
         public int Location { get; set; }
 
+        public int Data { get; set; }
+
         public string LocString { get { return LocationToString(Location); } }
 
         public string LocationToString(int loc)

@@ -7,12 +7,11 @@ namespace PizzaBoxDomain
     public class Pizza
     {
         private string orderID;
-        private string custID;
+        private string custID = "-1";
         private int location;
 
         private string size;
         private string crust;
-        private List<string> toppings;
         private string topping1, topping2, topping3, topping4, topping5;
 
         private decimal subtotal;
@@ -28,7 +27,6 @@ namespace PizzaBoxDomain
 
         public string Size { get { return size; } set { size = value; } }
         public string Crust { get { return crust; } set { crust = value; } }
-        public List<string> Toppings { get; set; } = new List<string>();
 
         public string Topping1 { get { return topping1; } set { topping1 = value; } }
         public string Topping2 { get { return topping2; } set { topping2 = value; } }

@@ -1,20 +1,45 @@
-﻿@{
+﻿@model PizzaBoxClient.Models.OrderHistory
+
+@{
     Layout = "_LayoutAfter";
+    ViewData["Title"] = "ViewRestaurantData";
 }
 
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Daniel Coombs, this website allows users to order pizzas or view data related to ordering">
-    <meta name="keyword" content="ViewData">
-    <meta name="description" content="This platform allows users to place order or view data">
-    <title>View Data</title>
+<h1>Select Location and Data</h1>
 
-</head>
-<body>
+<hr />
+@ViewData["Text"]
+<div class="row">
+    <form asp-action="ViewRestaurantDat">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <h4>Location</h4>
+            @Html.DropDownList("Location", new List<SelectListItem> {
+            new SelectListItem { Text = "Arlington", Value = "1", Selected = true },
+            new SelectListItem { Text = "Dallas", Value = "2", Selected = false },
+            new SelectListItem {Text = "Fort Worth", Value = "3", Selected = false},
+            new SelectListItem {Text = "Houston", Value = "4", Selected = false},
+            new SelectListItem {Text = "Austin", Value = "5", Selected = false},
+            })
+        </div>
+        <div class="form-group">
+            <h4>Data</h4>
+            @Html.DropDownList("Data", new List<SelectListItem> {
+            new SelectListItem { Text = "Customers", Value = "1", Selected = true },
+            new SelectListItem { Text = "Orders and Sales", Value = "2", Selected = false },
+            new SelectListItem { Text = "Inventory", Value = "Large", Selected = false },
+            })
+        </div>
+        <div class="form-group">
+            <input type="submit" value="View Data" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
 
-</body>
-</html>
+<div>
+    <a asp-action="Locations">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

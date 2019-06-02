@@ -78,3 +78,6 @@ C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxClient\obj\
 C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxClient\obj\Debug\netcoreapp2.2\Razor\Views\Home\RedirectToViewOrders.g.cshtml.cs
 C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxClient\obj\Debug\netcoreapp2.2\Razor\Views\Home\ConfirmOrder.g.cshtml.cs
 C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxClient\obj\Debug\netcoreapp2.2\Razor\Views\Home\PlaceOrder.g.cshtml.cs
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxClient\obj\Debug\netcoreapp2.2\Razor\Views\Home\ViewRestaurantData_Customers.g.cshtml.cs
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxClient\obj\Debug\netcoreapp2.2\Razor\Views\Home\ViewRestaurantData_OrdersAndSales.g.cshtml.cs
+C:\Revature\Project1\Coombs_Daniel_Project1\PizzaBoxSolution\PizzaBoxClient\obj\Debug\netcoreapp2.2\Razor\Views\Home\ViewRestaurantData_Inventory.g.cshtml.cs

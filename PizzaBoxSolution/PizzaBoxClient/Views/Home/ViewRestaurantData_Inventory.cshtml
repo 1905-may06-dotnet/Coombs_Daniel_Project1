@@ -1,0 +1,86 @@
+﻿@model IEnumerable<PizzaBoxClient.Models.Inventory>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "ViewRestaurantData_Inventory";
+}
+
+<h1>Inventory</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Dough)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sauce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cheese)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pepperoni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sausage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bacon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pineapple)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mushroom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Onion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Olive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dough)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sauce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cheese)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pepperoni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sausage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bacon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pineapple)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mushroom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Onion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Olive)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="ViewRestaurantData">Back to Data</a>
+</div>

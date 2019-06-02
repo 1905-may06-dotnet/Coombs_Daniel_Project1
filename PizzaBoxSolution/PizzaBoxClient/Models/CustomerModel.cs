@@ -53,6 +53,7 @@ namespace PizzaBoxClient.Models
         [Required(ErrorMessage ="Please re-enter your password.")]
         public string ReEnterPassword { get; set; }
 
-        public string custID { get; set; }
+        public string CustID { get; set; } 
+        public int Location { get; set; } //ViewRestaurantData_Customer
     }
 }

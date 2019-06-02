@@ -1,12 +1,15 @@
 ﻿@model IEnumerable<PizzaBoxClient.Models.OrderHistory>
 
 @{
-    ViewData["Title"] = "ViewOrders";
     Layout = "_LayoutAfter";
+    ViewData["Title"] = "ViewRestaurantData_OrdersAndSales";
+    decimal total = 0.00M;
+    int qty = 0;
 }
 
-<h1>View Orders</h1>
-
+<h1>Orders and Sales</h1>
+<br />
+<h3>@ViewBag.OrdersAndSales</h3>
 <table class="table">
     <thead>
         <tr>
@@ -44,13 +47,25 @@
                 @Html.DisplayNameFor(model => model.TimePlaced)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DatePlaced.Date)
+                @Html.DisplayNameFor(model => model.DatePlaced)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocString)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
+    total += item.Subtotal;
+    qty++;
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.OrderID)
@@ -88,7 +103,20 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DatePlaced)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocString)
+            </td>
         </tr>
 }
     </tbody>
 </table>
+
+<div>
+    <a asp-action="ViewRestaurantData">Back to Data</a>
+</div>

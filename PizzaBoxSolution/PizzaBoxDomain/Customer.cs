@@ -17,7 +17,7 @@ namespace PizzaBoxDomain
 
         private string _username;
         private string _password;
-        private string _custID;
+        private string _custID = "-1";
 
         public string FirstName { get { return _firstname; } set { _firstname = value; } }
         public string LastName { get { return _lastname; } set { _lastname = value; } }
