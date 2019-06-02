@@ -92,18 +92,5 @@ namespace PizzaBoxDomain
             if (Subtotal > 1000.00M) return false; //orders over $1000
             return true;
         }
-
-        public string ConfirmOrderString()
-        {
-            string script = "";
-            script = $"{Qty} {Size} {Crust} Crust Pizza";
-            if (Qty > 1) script += "s";
-            script += $"with the Following Topping(s):\n{Topping1}, {Topping2}";
-            if (Topping3 != null && Topping3 != "") script += $", {Topping3}";
-            if (Topping4 != null && Topping4 != "") script += $", {Topping4}";
-            if (Topping5 != null && Topping5 != "") script += $", {Topping5}";
-            script += $"\nQty: {Qty} Subtotal: ${Subtotal}";
-            return script;
-        }
     }
 }

@@ -296,6 +296,8 @@ namespace PizzaBoxClient.Controllers
                     orderqty += i.Qty;
                     orders.Subtotal = i.Subtotal;
                     totalsubtotal += i.Subtotal;
+                    orders.Date = i.Date;
+                    orders.Time = i.Time;
                     orderhistorylist.Add(orders);
                 }
             }

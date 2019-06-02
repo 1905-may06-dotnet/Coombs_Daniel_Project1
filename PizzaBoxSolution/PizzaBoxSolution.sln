@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaBoxDomain", "PizzaBoxDomain\PizzaBoxDomain.csproj", "{BB7F56EF-37D4-4563-9723-4A3370ADFE1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaBoxDomain", "PizzaBoxDomain\PizzaBoxDomain.csproj", "{BB7F56EF-37D4-4563-9723-4A3370ADFE1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaBoxData", "PizzaBoxData\PizzaBoxData.csproj", "{3ADCBF78-FD8D-4E4A-B2C5-190F03ED58A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaBoxData", "PizzaBoxData\PizzaBoxData.csproj", "{3ADCBF78-FD8D-4E4A-B2C5-190F03ED58A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaBoxClient", "PizzaBoxClient\PizzaBoxClient.csproj", "{C6E0BF36-57D3-426A-A80B-DE56A0F31661}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaBoxClient", "PizzaBoxClient\PizzaBoxClient.csproj", "{C6E0BF36-57D3-426A-A80B-DE56A0F31661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaBoxTest", "PizzaBoxTest\PizzaBoxTest.csproj", "{E8EC5FC8-8345-4A7F-BA0D-07C8AB3C75D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C6E0BF36-57D3-426A-A80B-DE56A0F31661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6E0BF36-57D3-426A-A80B-DE56A0F31661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6E0BF36-57D3-426A-A80B-DE56A0F31661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8EC5FC8-8345-4A7F-BA0D-07C8AB3C75D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8EC5FC8-8345-4A7F-BA0D-07C8AB3C75D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8EC5FC8-8345-4A7F-BA0D-07C8AB3C75D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8EC5FC8-8345-4A7F-BA0D-07C8AB3C75D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

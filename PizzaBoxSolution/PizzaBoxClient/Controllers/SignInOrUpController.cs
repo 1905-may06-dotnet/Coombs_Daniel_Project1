@@ -131,7 +131,7 @@ namespace PizzaBoxClient.Controllers
             }
             catch
             {
-                return LogIn();
+                return RedirectToAction("LogIn");
             }
         }
     }

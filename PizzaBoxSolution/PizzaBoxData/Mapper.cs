@@ -35,7 +35,7 @@ namespace PizzaBoxData
             Zipcode = cust.ZipCode,
             Username = cust.Username,
             Password = cust.Password,
-            CustomerId = Convert.ToInt32(cust.CustID)
+            //CustomerId = Convert.ToInt32(cust.CustID)
         };
 
         public static Pizza Map(OrdersPlaced order) => new Pizza

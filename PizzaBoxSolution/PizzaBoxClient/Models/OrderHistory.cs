@@ -29,6 +29,9 @@ namespace PizzaBoxClient.Models
 
         public string LocString { get { return LocationToString(Location); } }
 
+        public DateTime Date { get; set; }
+        public TimeSpan Time { get; set; }
+
         public string LocationToString(int loc)
         {
             switch (loc)
