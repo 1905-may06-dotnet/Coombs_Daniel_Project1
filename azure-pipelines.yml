@@ -29,5 +29,5 @@ steps:
       azureSubscription: 'connectiondc'
       appType: 'webApp'
       WebAppName: 'pizzaparadise'
-      packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+      packageForLinux: '$(System.DefaultWorkingDirectory)/$(pathtoproject)/*.zip'
       
