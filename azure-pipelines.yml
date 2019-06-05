@@ -12,12 +12,13 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  pathtosolution: 'PizzaBoxSolution/PizzaBoxClient'
   pathtoproject: 'PizzaBoxSolution/PizzaBoxClient'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
- # workingDirectory: pathtosolution
+  workingDirectory: pathtosolution
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
