@@ -38,6 +38,7 @@ steps:
     --configuration $(buildConfiguration)
     --no-build
 #    /p:CollectCoverage=true
+#    --results-directory $(Build.ArtifactStagingDirectory)/Test/
   workingDirectory: $(pathtosolution)
   displayName: 'dotnet test'
 
