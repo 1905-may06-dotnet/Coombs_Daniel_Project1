@@ -12,7 +12,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  pathtosolution: 'PizzaBoxSolution/PizzaBoxClient'
+  pathtosolution: 'Coombs_Daniel_Project1/PizzaBoxSolution'
   pathtoproject: 'PizzaBoxSolution/PizzaBoxClient'
 
 steps:
@@ -30,10 +30,3 @@ steps:
       appType: 'webApp'
       WebAppName: 'pizzaparadise'
       packageForLinux: '$(System.DefaultWorkingDirectory)/$(pathtoproject)/**/*.zip'
-- task: VSTest@2
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: '**\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**'
-    searchFolder: '$(System.DefaultWorkingDirectory)'
