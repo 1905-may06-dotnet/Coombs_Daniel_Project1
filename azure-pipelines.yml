@@ -15,7 +15,9 @@ trigger:
 #
 
 #configured build server. By Default, the Default points to empty server, so use Microsoft hosted Agents
-pool: 'Default'
+#pool: 'Default'
+pool:
+  vmImage: 'ubuntu-latest'
 
 #values to be used over a period of time
 variables:
@@ -35,6 +37,7 @@ steps:
 - script: dotnet test 
     --configuration $(buildConfiguration)
     --no-build
+#    /p:CollectCoverage=true
   workingDirectory: $(pathtosolution)
   displayName: 'dotnet test'
 
