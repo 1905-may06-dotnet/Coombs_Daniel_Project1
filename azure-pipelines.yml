@@ -22,7 +22,7 @@ pool:
 #values to be used over a period of time
 variables:
   buildConfiguration: 'Release'
-  pathtosolution: 'PizzaBoxSolution/PizzaBoxclient'
+  pathtosolution: 'PizzaBoxSolution/PizzaBoxClient'
   pathtoproject: 'PizzaBoxSolution/PizzaBoxClient'
   pathtotest: 'PizzaBoxSolution/PizzaBoxTest'
 
