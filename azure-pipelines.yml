@@ -4,29 +4,66 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
+#trigger is the branch this pipline will be pointing to
 trigger:
 - master
+#- dev
+#- staging
 
-pool:
-  vmImage: 'ubuntu-latest'
+#pool:
+#  vmImage: 'ubuntu-latest'
+#
 
+#configured build server. By Default, the Default points to empty server, so use Microsoft hosted Agents
+pool : Default
+
+#values to be used over a period of time
 variables:
   buildConfiguration: 'Release'
-  pathtosolution: 'PizzaBoxSolution'
+  pathtosolution: 'PizzaBoxSolution/'
   pathtoproject: 'PizzaBoxSolution/PizzaBoxClient'
+  pathtotest: 'PizzaBoxSolution/PizzaBoxTest'
 
 steps:
+
+#BUILD: .NET Core -> build, path to project(s): $(pathtosolution) -> Add
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
   workingDirectory: $(pathtosolution)
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'publish'
-    projects: $(pathtoproject)/*.csproj
-- task: AzureRmWebAppDeployment@4
-  inputs:
-      ConnectionType: 'AzureRM'
-      azureSubscription: 'connectiondc'
-      appType: 'webApp'
-      WebAppName: 'pizzaparadise'
-      packageForLinux: '$(System.DefaultWorkingDirectory)/$(pathtoproject)/**/*.zip'
+
+#BASIC TEST
+- script: dotnet test 
+    --configuration $(buildConfiguration)
+    --no-build
+  workingDirectory: $(pathtosolution)
+  displayName: 'dotnet test'
+
+#1. Hello world message to check the server is live
+
+#2. Make a dotnet build -> Ctrl+Shift+B
+#- script: dotnet build --configuration $(buildConfiguration)
+#  displayName: 'dotnet build $(buildConfiguration)'
+#  workingDirectory: $(pathtosolution)
+
+#3. dotnet publish -> to package the binaries in a folder
+#- task: DotNetCoreCLI@2
+#  inputs:
+#    command: 'publish'
+#    projects: $(pathtoproject)/*.csproj
+
+#4. Task to deploy app on the azure server
+#- task: AzureRmWebAppDeployment@4
+#  inputs:
+#    ConnectionType: 'AzureRM'
+#    azureSubscription: 'connectiondc'
+#    appType: 'webApp'
+#    WebAppName: 'pizzaparadise'
+#    packageForLinux: '$(System.DefaultWorkingDirectory)/$(pathtoproject)/**/*.zip'
+
+#- task: VSTest@2
+#  inputs:
+#    testSelector: 'testAssemblies'
+#    testAssemblyVer2: '**\*test*.dll
+#      !**\*TestAdapter.dll
+#      !**\obj\**'
+#    searchFolder: '$(System.DefaultWorkingDirectory)'
