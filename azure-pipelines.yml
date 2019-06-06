@@ -12,7 +12,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  pathtosolution: 'Coombs_Daniel_Project1/PizzaBoxSolution'
+  pathtosolution: 'PizzaBoxSolution'
   pathtoproject: 'PizzaBoxSolution/PizzaBoxClient'
 
 steps:
