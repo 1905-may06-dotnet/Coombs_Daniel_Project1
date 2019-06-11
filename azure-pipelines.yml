@@ -19,7 +19,13 @@ variables:
 
 steps:
 
-
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'project1Sonar'
+    organization: 'danielcoombs005-github'
+    scannerMode: 'MSBuild'
+    projectKey: '9bb3822a8526a0055d4dec949a1eecf96398d4a6'
+  displayName: 'Sonar Prepare Analysis'
 
 #BUILD: .NET Core -> build, path to project(s): $(pathtosolution) -> Add
 - script: dotnet build --configuration $(buildConfiguration)
@@ -37,6 +43,12 @@ steps:
   inputs:
       command: 'publish'
       publishWebProjects: true
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 
 - task: PublishBuildArtifacts@1
   inputs:
