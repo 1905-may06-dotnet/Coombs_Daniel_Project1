@@ -4,18 +4,9 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-#trigger is the branch this pipline will be pointing to
 trigger:
 - master
-#- dev
-#- staging
 
-#pool:
-#  vmImage: 'ubuntu-latest'
-#
-
-#configured build server. By Default, the Default points to empty server, so use Microsoft hosted Agents
-#pool: 'Default'
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -28,6 +19,8 @@ variables:
 
 steps:
 
+
+
 #BUILD: .NET Core -> build, path to project(s): $(pathtosolution) -> Add
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
@@ -37,7 +30,5 @@ steps:
 - script: dotnet test 
     --configuration $(buildConfiguration)
     --no-build
-#    /p:CollectCoverage=true
-#    --results-directory $(Build.ArtifactStagingDirectory)/Test/
   workingDirectory: $(pathtosolution)
   displayName: 'dotnet test'
