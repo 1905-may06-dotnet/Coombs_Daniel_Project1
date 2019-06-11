@@ -24,7 +24,7 @@ namespace PizzaBoxTest
 
             Assert.IsTrue(p.CheckIfOverAmount());
         }
-
+/*
         [TestMethod]
         public void TestMethod2() //test eligiblity for 2 hours after placing order
         {
@@ -69,6 +69,6 @@ namespace PizzaBoxTest
             p.Date = new DateTime(2019, 6, 1);
 
             Assert.IsTrue(p.CheckIfEligibleSameDay(p.Date, 2));
-        }
+        }*/
     }
 }
