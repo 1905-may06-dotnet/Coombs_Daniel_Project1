@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS PizzaDomain
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS PizzaBoxDomain
 
 WORKDIR /app
 
