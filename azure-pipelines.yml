@@ -37,3 +37,11 @@ steps:
   inputs:
       command: 'publish'
       publishWebProjects: true
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'connectiondc'
+    appType: 'webApp'
+    WebAppName: 'pizzaparadise'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
