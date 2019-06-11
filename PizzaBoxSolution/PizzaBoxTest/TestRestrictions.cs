@@ -31,10 +31,10 @@ namespace PizzaBoxTest
             Pizza p = new Pizza();
             p.Location = 1;
             
-            /*
-             * Please set system time to 3:00 P.M.
-             * Please set system date to June 2, 2019
-             */
+            
+             // Please set system time to 3:00 P.M.
+             // Please set system date to June 2, 2019
+             
             p.Time = new TimeSpan(14, 00, 00);
             p.Date = new DateTime(2019, 6, 2);
 
@@ -55,10 +55,10 @@ namespace PizzaBoxTest
         {
             Pizza p = new Pizza();
 
-            /*
-             * Please set system time to 3:00 P.M.
-             * Please set system date to June 2, 2019
-            */
+            
+             // Please set system time to 3:00 P.M.
+             // Please set system date to June 2, 2019
+            
 
             p.Location = 1;
             p.Date = new DateTime(2019, 6, 2);
